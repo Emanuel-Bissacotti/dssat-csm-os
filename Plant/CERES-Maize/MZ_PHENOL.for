@@ -288,9 +288,9 @@
             IF (ISECT .EQ. 1 .AND. C255(1:1) .NE. ' ' .AND.
      &            C255(1:1) .NE. '*') THEN
               READ(C255,3100,IOSTAT=ERRNUM) ECOTYP,ECONAM,TBASE,TOPT,
-     &             ROPT,P2O,DJTI,GDDE,DSGFT,RUE, KCAN, TSEN, CDAY,
+     &             ROPT,P2O,DJTI,GDDE,DSGFT,RUE, KCAN, TSEN,
      &             FOZ1, SFOZ1, OBASE
-3100          FORMAT (A6,1X,A16,1X,14(1X,F5.0))
+3100          FORMAT (A6,1X,A16,1X,10(1X,F5.0),6X,3(1X,F5.0))
               IF (ERRNUM .NE. 0) CALL ERROR(ERRKEY,ERRNUM,FILEE,LNUM)
         
 !  JG updated TSEN and CDAY format above 02/03/2023
